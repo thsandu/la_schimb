@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @asset.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @asset.description %>
+</p>
+<p>
+  <strong>Image url:</strong>
+  <%= image_tag(determine_img_path(@asset.image_url), size: "200x125") %>
+</p>
+<p>
+  <strong>Borrowed:</strong>
+  <%= @asset.borrowed %>
+</p>
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>
